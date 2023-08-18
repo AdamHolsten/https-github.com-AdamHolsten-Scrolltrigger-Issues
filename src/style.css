@@ -1,0 +1,257 @@
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+p,
+span {
+  font-family: 'Syne', sans-serif;
+  font-size: 22px;
+  line-height: 44px;
+}
+
+li {
+  font-family: 'Syne', sans-serif;
+  color: #3f4144;
+  font-size: 22px;
+  line-height: 29px;
+}
+
+.grey {
+  background-color: #f2f2f2;
+}
+
+.ten-px-inner {
+  padding: 0 10px;
+}
+
+.vertical-line {
+  width: 3px;
+  height: 300px;
+}
+
+.horizontal-line {
+  height: 3px;
+}
+
+.relative {
+  position: relative;
+}
+
+.center-absolute {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.inner-padding {
+  padding-left: 35px;
+  padding-right: 35px;
+}
+
+.white {
+  background-color: white;
+}
+
+.blue {
+  background-color: #1578a0;
+}
+
+#menu {
+  position: absolute;
+  top: 34px;
+  right: 34px;
+  z-index: 10;
+}
+
+.inner-content {
+  padding: 150px 35px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.inner-content .text-content {
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.full-height {
+  height: 100vh;
+}
+
+#hero {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+#hero .line {
+  position: absolute;
+  bottom: 0;
+  z-index: 13;
+  height: 37vh;
+}
+#hero .border {
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  position: absolute;
+  overflow: hidden;
+  border-radius: 25px;
+  background-color: #1578a0;
+}
+#hero .gradient-overlay {
+  background-image: radial-gradient(
+    transparent,
+    transparent,
+    rgba(20, 20, 20, 0.5803921569)
+  );
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+}
+#hero #header-and-dek {
+  position: relative;
+  z-index: 10;
+}
+#hero #svg-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  min-width: 815px;
+  min-height: 380px;
+}
+#hero h1 {
+  color: white;
+  text-align: center;
+  font-size: 74px;
+  letter-spacing: 0.01em;
+  line-height: 4.5rem;
+}
+#hero p {
+  color: white;
+  text-align: center;
+  font-size: 26px;
+}
+
+#intro {
+  background-color: white;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  background-image: url('./assets/intro-bg.jpg');
+  background-repeat: repeat;
+  background-size: 150px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#intro .line {
+  position: absolute;
+  top: 0px;
+  z-index: 13;
+  height: 20vh;
+}
+#intro .line:nth-child(2) {
+  position: relative;
+  height: 3px;
+  margin: 15px 0 20px;
+  max-width: 50%;
+}
+#intro .line:last-of-type {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  top: initial;
+}
+#intro.inner-content {
+  padding: 0;
+  margin-top: -10px;
+}
+#intro.inner-content .text-content {
+  padding-bottom: 150px;
+}
+#intro #headshot {
+  max-width: 260px;
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+#intro .bg-boxes {
+  border-radius: 40% 40% 0 0px;
+  padding-bottom: 0px;
+  padding-top: 100px;
+}
+#intro .img-content {
+  position: relative;
+}
+#intro h2:before {
+  content: 'Hello, my name’s Adam.';
+  font-family: 'Syne', sans-serif;
+  font-weight: normal;
+  font-size: 22px;
+  text-transform: uppercase;
+  line-height: 44px;
+  text-align: left;
+  display: block;
+  color: #18184e;
+  padding-bottom: 30px;
+}
+@media screen and (min-width: 768px) {
+  #intro {
+    padding: 200px 0 !important;
+    min-height: 800px;
+  }
+  #intro h2 {
+    text-transform: initial;
+    font-size: 65px;
+    line-height: 60px;
+    color: #18184e;
+  }
+  #intro #headshot {
+    max-width: 300px;
+    padding-bottom: 0;
+  }
+  #intro.inner-content .text-content {
+    padding-bottom: 0;
+    margin: 0;
+    padding: 0 130px;
+    max-width: none;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+  }
+  #intro .left,
+  #intro .right {
+    width: 100%;
+  }
+  #intro .left {
+    width: 100%; /* Set the desired width of your circle */
+    height: 100%; /* Set the desired height of your circle */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  #intro .left #big-bg-circle {
+    width: 1200px;
+    max-width: none;
+    height: auto;
+    position: absolute;
+    opacity: 0.5;
+  }
+  #intro .left .img-content {
+    position: relative;
+  }
+  #intro .img-content {
+    padding: 0 130px;
+  }
+}
